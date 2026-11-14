@@ -1,0 +1,1 @@
+const assert=require('node:assert/strict');const G=require('./public/games');assert.equal(G.games.length,40);for(const g of G.games)for(let l=1;l<=5;l++){let d=G.make(g.id,123,l);assert.ok(d.prompt);assert.equal(d.level,l)}console.log('40指令 × 5難易度の生成確認 OK');
